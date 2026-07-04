@@ -169,8 +169,28 @@
                     Console.WriteLine("An unexpected error occurred.");
                 }
 
-
             }
+            ////////////////////////////////////////////////////////////////////////
+
+            // Task 8:Sum of Even Numbers Only
+            Console.Write("Enter a positive whole number: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            int Sum = 0;
+
+            for (int i = 1; i <= N; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Sum += i;
+                }
+            }
+
+            Console.WriteLine("The sum of even numbers is: " + Sum);
+
+
+
+
         }
     }
 }
