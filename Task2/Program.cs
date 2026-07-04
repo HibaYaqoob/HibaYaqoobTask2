@@ -6,8 +6,8 @@
         {
             // Task 1: Countdown Timer
 
-            Console.Write("Enter the starting number: ");
-            int startNumber = int.Parse(Console.ReadLine());
+           Console.Write("Enter the starting number: ");
+           int startNumber = int.Parse(Console.ReadLine());
 
             for (int i = startNumber; i >= 1; i--)
             {
@@ -30,6 +30,19 @@
                 sum += i;
             }
             Console.WriteLine("The sum is: " + sum);
+
+            //////////////////////////////////////////////////////////////////
+
+            // Task 3: Multiplication Table
+
+            Console.Write("Enter a number for multiplication table: ");
+            int num = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{num} x {i} = {num * i}");
+            }
+
 
 
 
