@@ -94,6 +94,35 @@
 
             Console.WriteLine("You guessed the number in " + attempts + "attempts.");
 
-        }
-    }
+
+            ////////////////////////////////////////////////////////////////////////////////////
+
+            // Task 6: Safe Division calculator
+
+            try
+            {
+                Console.Write("Enter the first number: ");
+                int num1 = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter the second number: ");
+                int num2 = int.Parse(Console.ReadLine());
+
+                int result = num1 / num2;
+
+                Console.WriteLine("Result: " + result);
+            }
+            catch (DivideByZeroException)
+            { 
+               Console.WriteLine("Error: You cannot divide by zero.");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error: Please enter valid numbers.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("An unexpected error occurred: ");
+            }
+}
+}
 }
