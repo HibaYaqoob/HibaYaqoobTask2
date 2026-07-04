@@ -190,6 +190,55 @@
 
 
 
+            ////////////////////////////////////////////////////////////////////////
+
+            // Task 9: Validated Positive Number Input (C#)
+
+            int m = 0;
+            bool valid = false;
+
+            do
+            {
+                try
+                {
+                    Console.Write("Enter a positive whole number: ");
+                    m = int.Parse(Console.ReadLine());
+
+                    if (m <= 0)
+                    {
+                        Console.WriteLine("Error: Number must be greater than zero.");
+                        valid = false;
+                    }
+                    else
+                    {
+                        valid = true;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Error: Please enter a valid whole number.");
+                    valid = false;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("An unexpected error occurred.");
+                    valid = false;
+                }
+
+            } while (!valid);
+
+            // Sum calculation (separate for loop)
+            int sumis = 0;
+
+            for (int i = 1; i <= n; i++)
+            {
+                sumis += i;
+            }
+
+            Console.WriteLine("The sum from 1 to " + n + " is: " + sumis);
+
+
+
 
         }
     }
