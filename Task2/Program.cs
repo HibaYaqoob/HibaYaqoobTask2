@@ -6,13 +6,13 @@
         {
             // Task 1: Countdown Timer
 
-           Console.Write("Enter the starting number: ");
-           int startNumber = int.Parse(Console.ReadLine());
+            Console.Write("Enter the starting number: ");
+            int startNumber = int.Parse(Console.ReadLine());
 
             for (int i = startNumber; i >= 1; i--)
             {
                 Console.WriteLine(i);
-                
+
             }
             Console.WriteLine("Liftoff");
 
@@ -23,7 +23,7 @@
             Console.Write("Enter a positive whole number: ");
             int n = int.Parse(Console.ReadLine());
 
-            int sum= 0;
+            int sum = 0;
 
             for (int i = 1; i <= n; i++)
             {
@@ -55,7 +55,8 @@
                 Console.Write("Enter the password: ");
                 password = Console.ReadLine();
 
-                if (password != correctPassword) {
+                if (password != correctPassword)
+                {
 
                     Console.WriteLine("Incorrect password, try again.");
                 }
@@ -112,8 +113,8 @@
                 Console.WriteLine("Result: " + result);
             }
             catch (DivideByZeroException)
-            { 
-               Console.WriteLine("Error: You cannot divide by zero.");
+            {
+                Console.WriteLine("Error: You cannot divide by zero.");
             }
             catch (FormatException)
             {
@@ -123,6 +124,53 @@
             {
                 Console.WriteLine("An unexpected error occurred: ");
             }
-}
-}
+            ////////////////////////////////////////////////////////////////////////////////////
+            // Task 7: Repeating Menu with Exit Option
+
+            int choice = 0;
+
+            while (choice != 3)
+            {
+                Console.WriteLine("\n===== Menu =====");
+                Console.WriteLine("1. Say Hello");
+                Console.WriteLine("2. Show Current Time-of-day Greeting");
+                Console.WriteLine("3. Exit");
+                Console.Write("Enter your choice: ");
+
+                try
+                {
+                    choice = Convert.ToInt32(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine("Hello!");
+                            break;
+
+                        case 2:
+                            Console.WriteLine("Good Morning!");
+                            break;
+
+                        case 3:
+                            Console.WriteLine("Exiting the program...");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice. Please try again.");
+                            break;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Error: Please enter a numeric value.");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("An unexpected error occurred.");
+                }
+
+
+            }
+        }
+    }
 }
